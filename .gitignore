@@ -1,2 +1,5 @@
 .idea
 ocaml-template
+**/_build
+**/.vscode
+
