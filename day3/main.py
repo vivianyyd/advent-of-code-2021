@@ -28,10 +28,10 @@ def p1():
 
 def p2():
     oxy, co, o, c = inp, inp, '0', '0'
-    for i in range(len(inp[0])):  # loop thru bits of nums
+    for i in range(len(inp[0])):
         try:
             ocommon = common(oxy)[i]
-            ccommon = common(co)[i]  # 1 if common(co)[i] >= len(co) / 2 else 0
+            ccommon = common(co)[i]
         except KeyError:
             pass  # empty num list only happens when o, c already obtained
         oxy = list(filter(lambda n: n[i] == ocommon, oxy))
