@@ -1,4 +1,4 @@
-with open('day3/input.txt', 'r') as f:
+with open('input.txt', 'r') as f:
     inp = [[int(char) for char in line.strip()] for line in f]
 
 
@@ -18,10 +18,9 @@ def to_string(lst):
 def p1():
     gamma = ''
     ep = ''
-    bits = common(inp)
-    for i in range(len(inp[0])):
-        gamma += '1' if bits[i] else '0'
-        ep += '0' if bits[i] else '1'
+    for i, c in sorted(common(inp).items()):
+        gamma += '1' if c else '0'
+        ep += '0' if c else '1'
     gamma, ep = int(gamma, 2), int(ep, 2)
     print(gamma * ep)
 
