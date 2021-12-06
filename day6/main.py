@@ -1,15 +1,10 @@
-def add(dic, k, v):
-    """ Sets dic[k] to dic[k] + v, or v if k is not in dic. """
-    if k in dic:
-        dic[k] += v
-    else:
-        dic[k] = v
+from lib import *
 
 
 def sim(iters):
     """ Runs the simulation for [iters] iterations. Prints the total number of fish at the end of the simulation. """
     days = {}  # {days until spawn: number of fish}
-    with open('day6/input.txt', 'r') as f:
+    with open('input.txt', 'r') as f:
         for d in f.readline().strip().split(','):
             add(days, int(d), 1)
     for i in range(iters):
