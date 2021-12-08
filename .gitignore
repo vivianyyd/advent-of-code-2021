@@ -3,3 +3,4 @@ template
 **/_build
 **/.vscode
 test.txt
+__pycache__
